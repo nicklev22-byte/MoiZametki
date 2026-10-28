@@ -18,6 +18,7 @@ jobs:
         run: |
           unzip -q MoiZametkiAndroid_GitHubBuild.zip
           test -d MoiZametkiAndroid
+          sed -i 's|android:description="Все разделы и заметки на рабочем столе"|android:description="@string/app_name"|' MoiZametkiAndroid/app/src/main/res/xml/notes_widget_info.xml
 
       - name: Set up Java
         uses: actions/setup-java@v4
